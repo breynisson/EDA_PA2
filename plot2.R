@@ -6,7 +6,7 @@ library(plyr)
 NEI_Baltimore<-NEI[NEI$fips==24510,]
 Baltimore_emissions_by_year<-aggregate(Emissions ~ year,data=NEI_Baltimore, sum)
 
-# Plot PM2.5 Emission in Million Tons vs Year and save as plot1.png:
+# Plot PM2.5 Emission in Million Tons vs Year and save as plot2.png:
 png("plot2.png")
 barplot(Baltimore_emissions_by_year$Emissions, col="red", 
         names.arg=Baltimore_emissions_by_year$year, 
