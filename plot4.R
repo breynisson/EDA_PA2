@@ -27,6 +27,6 @@ coal_emissions_by_year<-aggregate(Emissions ~ year, data=NEI_coal, sum)
 png("plot4.png")
 barplot(coal_emissions_by_year$Emissions/1000, col="red", 
         names.arg=coal_emissions_by_year$year, 
-        main=bquote("Total "~PM[2.5]~" Emissions in the US due from Coal Combustion per year"),
+        main=bquote("Total "~PM[2.5]~" Emissions in the US from Coal Combustion per year"),
         xlab="Year", ylab="Kilotons")
 dev.off()
